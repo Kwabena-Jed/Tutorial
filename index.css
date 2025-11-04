@@ -129,8 +129,10 @@ header {
     color: #162938;
     font-weight: 500;
     pointer-events: none;
-    transition: 5s;
+    transition: 0.3s;
 }
+
+
 
 .input-box input:focus-label,
 .input-box input:valid-label {
@@ -145,17 +147,25 @@ header {
     outline: none;
     font-size: 0.5cm;
     color: #162938;
-    font-weight: 60;
-    padding: 0 35px 0 5px;
+    font-weight: 600;
+    padding: 20px 35px 0 5px;
+}
+
+.input-box input:focus~label,
+.input-box input:focus~label {
+    top: -5px;
 }
 
 .input-box .icon {
-    position: absolute;
-    right: 2px;
-    font-size: 1.2cm;
+    position:absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.6cm;
     color: #162938;
-    line-height: 50px;
+    pointer-events: none;
 }
+
 
 .remember .forgot {
     font-size: .5cm;
