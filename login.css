@@ -1,31 +1,193 @@
-/* Add a black background to the login page */
+/* General reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Shared Container ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;       /* centers horizontally */
+  padding: 0 20px;      /* adds space from screen edges */
+}
+
+/* ===== Top Info Bar ===== */
+.topbar {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  flex-wrap: wrap;
+}
+
+.topbar-left span {
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.topbar-right a {
+  color: #162938;
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.topbar-right a:hover {
+  color: #00bcd4;
+}
+
+/* ===== Main Nav Wrapper ===== */
+.nav-wrapper {
+  background-color: #162938;
+}
+
+/* ===== Main Navigation Bar ===== */
 .topnav {
-    background-color: #162938;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid rgba(255, 255, 255, 0.2); /* faint border line */
+  padding: 12px 0;
+  position: relative;
+  max-width: 1200px; /* centers navbar contents */
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: right;
-    color: #f2f2f2;
+/* Left section */
+.nav-left .logo {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Center section (links) */
+.nav-center {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #00bcd4;
+}
+
+.nav-center a.active {
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+/* Right section (search bar) */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 140px;
+}
+
+.search-form button {
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #0097a7;
+}
+
+/* Hamburger icon */
+.icon {
+  display: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+  .topbar .container {
+    flex-direction: column;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-bottom: 3px solid transparent;
-}
+    font-size: 13px;
+  }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    border-bottom: 3px solid #fff;
+  .topbar-left span {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-center,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
     background-color: #162938;
-    color: #f2f2f2;
-}
+    text-align: center;
+    padding: 10px 0;
+  }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background: #162938;
-    border-bottom: 3px solid #fff;
-    color: #fff;
+  .topnav.responsive .nav-center,
+  .topnav.responsive .nav-right {
+    display: flex;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .search-form {
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
 }

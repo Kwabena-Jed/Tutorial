@@ -3,19 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome page</title>
+    <title>Welcome Page</title>
     <link rel="stylesheet" href="login.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+</head>
 <body>
-    <!-- Navigation Bar -->
-    <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+
+    <!-- ===== Top Info Bar ===== -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span><i class="fa fa-mobile"></i> Mobile: +233 246 692 516</span>
+      <span><i class="fa fa-envelope"></i> teamgracesc@gmail.com</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Main Navigation Bar ===== -->
+<div class="nav-wrapper">
+  <div class="topnav">
+    <div class="nav-left">
+      <a href="login.html" class="logo">Welcome Page</a>
     </div>
 
+    <div class="nav-center">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Services</a>
+    </div>
 
+    <div class="nav-right">
+      <form class="search-form">
+        <input type="text" placeholder="Search..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    function toggleMenu() {
+  const nav = document.querySelector('.topnav');
+  nav.classList.toggle('responsive');
+}
+</script>
 </body>
 </html>
