@@ -37,19 +37,42 @@ body {
   margin-right: 15px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 5px;      /* space between icon and content */
 }
 
-.topbar-right a {
-  color: #162938;
-  margin-left: 10px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+.topbar-icon {
+  width: 18px;       /* set consistent icon size */
+  height: 18px;
+  object-fit: contain; /* keeps aspect ratio */
+  display: inline-block;
+  user-select: none;   /* prevents accidental selection */
+  -webkit-user-drag: none; /* prevents dragging in some browsers */
 }
 
-.topbar-right a:hover {
-  color: #00bcd4;
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;          /* even spacing between icons */
+  margin-right: 20px; /* breathing room from the right edge */
+}
+
+.social-icon {
+  width: 26px;            /* consistent visible size */
+  height: 26px;
+  object-fit: contain;    /* keeps aspect ratio, avoids distortion */
+  display: inline-block;
+  user-select: none;      /* prevents accidental text selection */
+  -webkit-user-drag: none;/* prevents dragging the image in some browsers */
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  cursor: default;        /* images are not links, so default cursor */
+  filter: none;           /* keep original image colors */
+}
+
+/* Optional hover effect for visual feedback even though they're not links */
+.social-icon:hover {
+  transform: scale(1.08);
+  opacity: 0.95;
 }
 
 /* ===== Main Nav Wrapper ===== */
@@ -78,6 +101,18 @@ body {
   font-weight: 600;
   font-size: 18px;
 }
+
+.logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
 
 /* Center section (links) */
 .nav-center {

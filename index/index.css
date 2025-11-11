@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    background: url('background.jpg') no-repeat;
+    background: url('/index/pictures/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -32,10 +32,16 @@ header {
 }
 
 .logo {
-    font-size: 5cm;
-    color: #fff;
-    user-select: none;
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
 }
+
+.logo-link {
+  text-decoration: none;
+}
+
 
 
 .main-nav a {
@@ -111,7 +117,6 @@ header {
     color: #162938;
     text-align: center;
 }
-
 .input-box {
     position: relative;
     width: 100%;
@@ -124,19 +129,12 @@ header {
     position: absolute;
     top: 50%;
     left: 5px;
-    transform: translateY(.50%);
+    transform: translateY(-50%);
     font-size: 0.5cm;
     color: #162938;
     font-weight: 500;
     pointer-events: none;
     transition: 0.3s;
-}
-
-
-
-.input-box input:focus-label,
-.input-box input:valid-label {
-    top: -5px;
 }
 
 .input-box input {
@@ -151,10 +149,14 @@ header {
     padding: 20px 35px 0 5px;
 }
 
-.input-box input:focus~label,
-.input-box input:focus~label {
+/* ✅ Corrected selector — both focus and valid states keep label up */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
     top: -5px;
+    font-size: 0.45cm;
+    color: #162938;
 }
+
 
 .input-box .icon {
     position:absolute;
@@ -199,6 +201,15 @@ header {
     font-weight: 400;
     margin: 25px 0 10px;
 }
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+.btn a:hover {
+  color: #f0f0f0;
+}
+
 
 .login-register {
     font: size 0.2cm;
