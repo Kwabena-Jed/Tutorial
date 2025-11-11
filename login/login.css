@@ -7,6 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #F5DEB3;
 }
 
 /* ===== Shared Container ===== */
@@ -181,23 +182,57 @@ body {
 }
 
 /* ROW LAYOUT */
+/* ROW LAYOUT - Horizontal Scrollable */
 .row {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start; /* Align cards to the left */
+  flex-wrap: nowrap; /* Prevent wrapping to keep cards in one line */
   gap: 30px;
   margin-top: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden;
+  padding: 20px;
+  scroll-behavior: smooth; /* Smooth scrolling animation */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar but keep functionality */
+.row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.row::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.row::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* MEMORY CARD */
 .memory-card {
   position: relative;
-  width: 100%;
+  width: 360px; /* Fixed width to maintain size */
+  min-width: 360px; /* Prevent shrinking */
   max-width: 360px;
   border-radius: 16px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+/* Hover effect for cards */
+.memory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* IMAGE */
