@@ -190,4 +190,91 @@ body {
     width: 80%;
     margin: 0 auto;
   }
+
+ /* GALLERY SECTION */
+.gallery-section {
+  width: 100%;
+  padding: 40px 0;
+  text-align: left;
+  background-color: #fff;
+}
+
+/* TITLE AND HEADER */
+.gallery-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.gallery-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gallery-header .see-all {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ROW LAYOUT */
+.row {
+  display: flex;
+  justify-content: center; /* Centers all cards horizontally */
+  flex-wrap: wrap; /* Allows multiple cards in new lines later */
+  gap: 30px; /* Space between cards if more are added */
+  margin-top: 20px;
+}
+
+/* MEMORY CARD */
+.memory-card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE */
+.memory-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+/* INFO TEXT */
+.memory-info {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: white;
+}
+
+.memory-info h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.memory-info p {
+  font-size: 14px;
+}
+
+/* ICONS */
+.memory-icons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  color: white;
+  font-size: 22px;
 }
