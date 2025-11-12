@@ -162,15 +162,26 @@ body {
 .search-form button {
   border: none;
   background-color: #00bcd4;
-  color: white;
   padding: 8px 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-form button:hover {
   background-color: #0097a7;
 }
+
+.search-icon {
+  width: 18px;           /* consistent size */
+  height: 18px;
+  object-fit: contain;    /* keeps aspect ratio */
+  user-select: none;      /* prevents accidental text selection */
+  -webkit-user-drag: none;/* prevents dragging in some browsers */
+}
+
 
 /* Hamburger icon */
 .icon {
